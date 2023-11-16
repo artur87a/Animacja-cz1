@@ -51,8 +51,8 @@ body {
     height: 70px;
     background-color: #8b0000;
     position: absolute;
-    bottom: 280px;
-    left: 100vh;
+    bottom: 200px;
+    left: 200px;
     border-radius: 15px;
     animation: carDrive 5s ease-in-out infinite;
 
@@ -92,59 +92,44 @@ body {
     }
   }
   @keyframes skyChange {
-    0%{
-        background-color: blue;
-
-    }
-   
-    100%{
-        background-color: rgb(1, 1, 21);
+    0% {
+      background-color: blue;
     }
 
-    
+    100% {
+      background-color: rgb(1, 1, 21);
+    }
   }
   @keyframes sunDown {
-    0%{
-        background-color: goldenrod;
-
-    }
-    
-    98%{
-        background-color: rgb(72, 55, 9);
-        box-shadow: 0 0 100px 20px rgb(77, 58, 10);
-        top: 600px;
-    }
-    100%{
-        opacity: 0.1;
+    0% {
+      background-color: goldenrod;
     }
 
-    
+    98% {
+      background-color: rgb(72, 55, 9);
+      box-shadow: 0 0 100px 20px rgb(77, 58, 10);
+      top: 600px;
+    }
+    100% {
+      opacity: 0.1;
+    }
   }
   @keyframes carDrive {
-    from{
-        left:0px;
+    from {
+      left: -100px;
     }
-    to{
-        right:10px
+    to {
+      left: 2000px;
+      overflow: hidden;
     }
+  }
 
-}
-@keyframes carDrive {
-    from{
-        left:0px;
+  @keyframes wheelTurning {
+    from {
+      transform: rotate(-360deg);
     }
-    to{
-        right:0px;
+    to {
+      transform: rotate(360deg);
     }
-
-}
-@keyframes wheelTurning {
-    from{
-     transform: rotate(-360deg);   
-    }
-    to{
-        transform: rotate(360deg);  
-    }
-
-}
+  }
 }
