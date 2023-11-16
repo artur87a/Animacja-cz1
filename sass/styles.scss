@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  background-color: #333;
+}
+.sky {
+  background-color: blue;
+  height: 70vh;
+  animation: skyChange 5s ease-in-out infinite;
+}
+
+.sun {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: goldenrod;
+  position: absolute;
+  left: 90px;
+  top: 90px;
+  box-shadow: 0 0 50px 30px goldenrod;
+  animation: sunDown 5s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+.ground {
+  height: 30vh;
+  background-color: rgb(61, 13, 13);
+
+  .grass {
+    height: 2vh;
+    background-color: lime;
+  }
+
+  .road {
+    height: 10vh;
+    background-color: gray;
+  }
+  .grassd {
+    height: 5vh;
+    background-color: lime;
+  }
+  .car {
+    width: 200px;
+    height: 70px;
+    background-color: #8b0000;
+    position: absolute;
+    bottom: 280px;
+    left: 100vh;
+    border-radius: 15px;
+    animation: carDrive 5s ease-in-out infinite;
+
+    .rear-window {
+      background-color: #c7e3e1;
+      width: 20px;
+      height: 30px;
+      border-radius: 20%;
+    }
+    .front-window {
+      background-color: #c7e3e1;
+      width: 60px;
+      position: absolute;
+      height: 30px;
+      border-radius: 10%;
+      right: 0;
+    }
+    .wheel {
+      background-color: black;
+      border: 2px dashed gray;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: wheelTurning 5s ease-in-out infinite;
+    }
+
+    .front-wheel {
+      position: absolute;
+      left: 20px;
+      bottom: -20px;
+    }
+
+    .rear-wheel {
+      position: absolute;
+      right: 20px;
+      bottom: -20px;
+    }
+  }
+  @keyframes skyChange {
+    0%{
+        background-color: blue;
+
+    }
+   
+    100%{
+        background-color: rgb(1, 1, 21);
+    }
+
+    
+  }
+  @keyframes sunDown {
+    0%{
+        background-color: goldenrod;
+
+    }
+    
+    98%{
+        background-color: rgb(72, 55, 9);
+        box-shadow: 0 0 100px 20px rgb(77, 58, 10);
+        top: 600px;
+    }
+    100%{
+        opacity: 0.1;
+    }
+
+    
+  }
+  @keyframes carDrive {
+    from{
+        left:0px;
+    }
+    to{
+        right:10px
+    }
+
+}
+@keyframes carDrive {
+    from{
+        left:0px;
+    }
+    to{
+        right:0px;
+    }
+
+}
+@keyframes wheelTurning {
+    from{
+     transform: rotate(-360deg);   
+    }
+    to{
+        transform: rotate(360deg);  
+    }
+
+}
+}
